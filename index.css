@@ -1,0 +1,162 @@
+@font-face {
+    font-family: InterBold;
+    src: url('./fonts/Inter-Bold.ttf');
+}
+@font-face {
+    font-family: InterExtraBold;
+    src: url('./fonts/Inter-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Inter;
+    src: url('./fonts/Inter-Regular.ttf');
+}
+body{
+    margin: 0;
+}
+#container{
+    display: flex;
+}
+#title{
+    font-family: InterBold;
+    font-size: 48px;
+}
+#half{
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 10%;
+    animation: 0.7s showLetters;
+}
+#btfPage{
+    width: 100%;
+}
+#card{
+    padding: 10px;
+    text-align: justify;
+    font-family: InterBold;
+    color: rgb(87, 87, 87);
+    font-size: larger;
+    top:30px;
+}
+#top{
+    transform: rotate(-156deg);
+    top:27px;
+    left: 33px;
+    position: relative;
+}
+#center{
+    transform: rotate(-180deg);
+    margin-top: 20vh;
+    margin-left: 21px;
+    position: relative;
+}
+#bottom{
+    top:30vh;
+    left: 37px;
+    transform: rotate(-221deg);
+    position: relative;
+}
+#headphone{
+    position: absolute;
+    top:24px;
+    right: 23px;
+    transform: rotate(21deg);
+}
+#symbol{
+    position: absolute;
+    right: 15%;
+    top:37%;
+}
+#pause{
+    position: absolute;
+    right: 7%;
+    top:23%;
+    transform: rotate(68deg);
+}
+#loop{
+    position: absolute;
+    right: 5%;
+    top:70%;
+    transform: rotate(136deg);
+}
+#top,#center,#bottom, #headphone, #symbol, #pause,#loop{
+    width: 64px;
+    height: 64px;
+    filter:drop-shadow(-5px -5px 0px rgb(233, 57, 57));
+    animation: showIcons 1.2s;
+}
+#downloader{
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(233, 57, 57);
+    border-radius: 50%;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#words{
+    font-family: Inter;
+    display: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none ;
+    -ms-user-select: none;
+    user-select: none;
+}
+#downloader:hover svg{
+    display: none;
+}
+#downloader:hover div{
+    display: flex;
+}
+#downloader:hover{
+    animation: expand 0.4s;
+    width: 80px;
+    border-radius: 25px;
+}
+a{
+    text-align: center;
+    font-family: InterExtraBold;
+    color: rgb(233, 57, 57);
+    text-decoration: underline wavy;
+    text-underline-offset: unset;
+}
+@keyframes showLetters {
+    0%{
+        margin-top: 15%;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 10%;
+        opacity: 1;
+    }
+
+}
+@keyframes showIcons {
+    0%{
+        opacity: 0;
+        filter:drop-shadow(-20px -20px 0px rgb(233, 57, 57));
+    }
+    100%{
+        opacity: 1;
+        filter:drop-shadow(-5px -5px 0px rgb(233, 57, 57));
+    }
+}
+@keyframes expand {
+    0%{
+        width: 48px;
+    }
+    100%{
+        width: 80px;
+        border-radius: 25px;
+    }
+}
+@media (max-width:700px) {
+    #most{
+        display: none;
+    }
+}
