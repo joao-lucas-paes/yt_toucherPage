@@ -84,9 +84,25 @@ body{
     filter:drop-shadow(-5px -5px 0px rgb(233, 57, 57));
     animation: showIcons 1.2s;
 }
+#iconsSOs{
+    display: flex;
+    width: 106px;
+    height: 106px;
+}
+#lin{
+    filter:drop-shadow(5px 0px 0px rgb(233, 57, 57));
+}
+#marginRight{
+    margin-right: 20px;
+    filter: invert(0%) sepia(100%) saturate(8%) hue-rotate(149deg) brightness(9%) contrast(103%) drop-shadow(5px 0px 0px rgb(233, 57, 57));
+}
+#iconsDown{
+    filter: invert(0%) sepia(100%) saturate(8%) hue-rotate(149deg) brightness(9%) contrast(103%);
+    display: none;
+}
 #downloader{
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 20px;
     background-color: rgb(233, 57, 57);
@@ -96,7 +112,6 @@ body{
     height: 48px;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 #words{
     font-family: Inter;
@@ -111,11 +126,29 @@ body{
     display: none;
 }
 #downloader:hover div{
+    display: inline-block;
+}
+#downloader:hover #row{
     display: flex;
+    flex-direction: row;
+}
+#downloader:hover #iconsDown{
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+#downloader:hover #row div{
+    padding: 4px;
+    background-color: rgb(49, 49, 206);
+    border-radius: 5px;
+    margin: 4px;
+    cursor: pointer;
 }
 #downloader:hover{
     animation: expand 0.4s;
-    width: 80px;
+    width: 120px;
+    height: 100px;
+    flex-direction: column;
     border-radius: 25px;
 }
 a{
@@ -151,7 +184,8 @@ a{
         width: 48px;
     }
     100%{
-        width: 80px;
+        width: 120px;
+        height: 100px;
         border-radius: 25px;
     }
 }
